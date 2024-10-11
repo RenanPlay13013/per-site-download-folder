@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Download Folder per Site",
+    "version": "1.0",
+    "description": "Cria uma pasta de download separada para sites específicos.",
+    "permissions": [
+      "downloads",
+      "storage",
+      "activeTab"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": [
+      "<all_urls>"
+    ], 
+    "action": { 
+        "default_popup": "send.html"
+    },
+    "web_accessible_resources": [
+        {
+          "resources": ["data/config.json"],
+          "matches": ["<all_urls>"]
+        }
+      ]
+  }
+  
